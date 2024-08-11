@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT automobile (manufacturer)>
+<!ATTLIST automobile
+       xmlns:xsi CDATA #IMPLIED
+       xsi:noNamespaceSchemaLocation CDATA #IMPLIED>
+       
+<!ELEMENT manufacturer (vehicle+)>
+<!ATTLIST manufacturer name CDATA #REQUIRED>
+
+<!ELEMENT vehicle (model,features,year,engine,speed,price)>
+<!ELEMENT model (#PCDATA)>
+<!ELEMENT features (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT engine (#PCDATA)>
+<!ELEMENT speed (#PCDATA)>
+<!ELEMENT price (#PCDATA)>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE automobile SYSTEM "bentley.dtd">
+<automobile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bentley.xsd">
+    <manufacturer name="Bentley Inc.">
+        <vehicle>
+            <model>Continental GTC Speed</model>
+            <features>Sunroof Available</features>
+            <year>2024</year>
+            <engine>V8 Hybrid</engine>
+            <speed>285 km/h</speed>
+            <price>3200000</price>
+        </vehicle>
+        <vehicle>
+            <model>Bentayga EWB Azure</model>
+            <features>Large SUV</features>
+            <year>2023</year>
+            <engine>V8 Petrol</engine>
+            <speed>290 km/h</speed>
+            <price>4000000</price>
+        </vehicle>
+        <vehicle>
+            <model>Flying Spur </model>
+            <features>Two powertrains</features>
+            <year>2022</year>
+            <engine>V8 Petrol and Hybrid</engine>
+            <speed>333 km/h</speed>
+            <price>5000000</price>
+        </vehicle>
+    </manufacturer>
+</automobile>

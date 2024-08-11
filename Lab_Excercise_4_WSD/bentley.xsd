@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:simpleType name="yearType">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="2018"></xs:minInclusive>
+            <xs:maxInclusive value="2024"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="priceType">
+        <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="2000000"></xs:minInclusive>
+            <xs:maxInclusive value="6000000"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="automobile">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="manufacturer" maxOccurs="1" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="vehicle" maxOccurs="unbounded" minOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="model" type="xs:string"/>
+                                        <xs:element name="features" type="xs:string"/>
+                                        <xs:element name="year" type="yearType"/>
+                                        <xs:element name="engine" type="xs:string"/>
+                                        <xs:element name="speed" type="xs:string"/>
+                                        <xs:element name="price" type="priceType"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
